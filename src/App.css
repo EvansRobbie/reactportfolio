@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+@layer base{
+    :root{
+        --primary-dark: #2d3748;
+        --primary-light: #fff;
+        @apply bg-primary text-primary
+    }
+    body {
+        @apply font-[poppins]
+    }
+    li{
+        @apply text-2xl py-8 font-bold
+    }
+    .rounded-div {
+        @apply border border-secondary  max-w-[1140px] w-full mx-auto shadow-xl bg-primary px-2 rounded-2xl
+    }
+    button{
+        @apply border px-2 py-3 rounded-xl shadow-2xl
+    }
+}
+.dark{
+    --color-bg-primary: #2d3748;
+    --color-bg-secondary: #283141;
+    --color-text-primary: #dbdbdb;
+    --color-text-secondary: #e2e8f0;
+    --color-text-accent: #81e6d9;
+    --color-bg-input: #4a5361;
+    --color-bg-button: #81e6d9;
+}
+.light{
+    --color-bg-primary: #fff;
+    --color-bg-secondary: #edf2f7;
+    --color-text-primary: #2d3748;
+    --color-text-secondary: #4a5568;
+    --color-text-accent: #2b6cb0;
+    --color-bg-input: #edf2f7;
+    --color-bg-button: #2b6cb0;
+  
+}
