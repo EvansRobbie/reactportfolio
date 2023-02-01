@@ -10,6 +10,9 @@
         --primary-light: #fff;
         @apply bg-primary text-primary
     }
+    html{
+        @apply scroll-smooth
+    }
     body {
         @apply font-[poppins]
     }

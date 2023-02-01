@@ -14,7 +14,7 @@ const Tech = () => {
         )
     })
   return (
-    <div className='rounded-div py-8 my-8  '>
+    <div className='rounded-div py-8 my-8 ' id='techstack'>
         <h2 className='text-3xl font-bold py-8 px-4 text-center md:text-left underline underline-offset-8 decoration-teal-400 durarion-300 '>My Tech Stack</h2>
         <div className='grid md:grid-cols-2 lg:grid-cols-3  gap-4'>
 
