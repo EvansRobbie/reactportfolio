@@ -1,5 +1,6 @@
 import React from 'react'
 import {BsArrowRight} from 'react-icons/bs'
+import CV from '../assets/Evanrobby.pdf'
 
 
 const Hero = () => {
@@ -13,10 +14,12 @@ const Hero = () => {
               I'm focused on building responsive frontend applications.
             </p>
         <div className='flex gap-2 py-16'>
-            <button className='hover:border-l-8 hover:border-r-8 border-accent hover:border-teal-500 duration-300'>Download Cv</button>
+            <button className='hover:border-l-8 hover:border-r-8 border-accent hover:border-teal-500 duration-300'>
+              <a href={CV} download>Download CV</a>
+            </button>
             <div className=' border border-secondary bg-button px-2 rounded-xl group shadow-2xl text-btnText hover:scale-105 transition flex items-center justify-between gap-2'>
                 <div>
-                <a href="#contact">View Work </a>
+                <a href="#contact">Let's talk </a>
                 </div>
                 <BsArrowRight size={20} className='group-hover:rotate-90 transition transform origin-left duration-300'/>
             </div>

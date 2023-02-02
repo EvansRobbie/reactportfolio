@@ -15,8 +15,8 @@ const Portfolio = () => {
             
             <p className='text-primary w-full px-8 py-4'>{description}</p>
             <div className='flex gap-4 px-8 lg:pb-2'>
-                <div className='flex gap-2 bg-primary hover:border-l-4 hover:border-r-4 border-white justify-between items-center rounded-2xl px-2 py-3 duration-300'><a href={github} target='_blank' className='text-sm'>Sourcecode</a><FaGithub size={20}/></div>
-                <div className='flex gap-2  bg-primary justify-between items-center rounded-2xl px-2 py-3 hover:scale-105 duration-300'><a href={website} target='_blank' className='text-sm'>Website</a><IoIosBrowsers size={20}/></div>
+                <div className='flex gap-2 bg-primary hover:border-l-4 hover:border-r-4 border-white justify-between items-center rounded-2xl px-2 py-3 duration-300'><a href={github} target='_blank'  rel="noreferrer" className='text-sm'>Sourcecode</a><FaGithub size={20}/></div>
+                <div className='flex gap-2  bg-primary justify-between items-center rounded-2xl px-2 py-3 hover:scale-105 duration-300'><a href={website} target='_blank'  rel="noreferrer" className='text-sm'>Website</a><IoIosBrowsers size={20}/></div>
             </div>
         </div>
         </div>

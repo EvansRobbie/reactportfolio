@@ -11,7 +11,14 @@ import {RiComputerFill} from 'react-icons/ri'
 import { useGlobalContext } from '../context/GlobalContext'
 const Navbar = () => {
     const {theme} = useThemeContext()
-    const {nav} = useGlobalContext()
+    const {nav, handleNav} = useGlobalContext()
+    // prevent scrolling when the sidebar is open
+    !nav ? document.body.style.overflow = 'scroll' : document.body.style.overflow = 'hidden'
+    // if(!nav){
+    //      document.body.style.overflow = 'scroll'
+    // }else{
+    //      document.body.style.overflow = 'hidden'
+    // }
     
   return (
     <div className=''>
@@ -25,19 +32,19 @@ const Navbar = () => {
         <div className={`${nav ? 'left-0 duration-300 fixed' : '-left-full duration-500 absolute' } md:hidden  top-0  w-full h-screen z-20 bg-primary ease-in delay-100 `}>
             <div className='flex flex-col justify-center items-center w-full h-full'>
             <ul className=''>
-                <li>
+                <li >
                     <a href="/">Home</a>
                 </li>
-                <li>
+                <li onClick={handleNav}>
                     <a href="#about">About</a>
                 </li>
-                <li>
+                <li onClick={handleNav}>
                     <a href="#techstack">Tech Stack</a>
                 </li>
-                <li>
+                <li onClick={handleNav}>
                     <a href="#portfolio">Portfolio</a>
                 </li>
-                <li>
+                <li onClick={handleNav}>
                     <a href="#contact">Contact</a>
                 </li>
             </ul>
@@ -75,19 +82,19 @@ const Navbar = () => {
         <div className='absolute top-[40%] md:top-[30%] flex flex-col justify-between z-10 right-0 overflow-hidden'>
            <ul >
             <li className='w-[130px] mx-auto h-[20px] flex items-center mr-[-100px] md:mr-[-70px] hover:text-accent md:hover:mr-[10px] duration-300 ease-in'>
-                <a href="/" className='flex items-center justify-between w-full text-base'><FaLinkedin size={30}/>LinkedIn 
+                <a href="https://www.linkedin.com/in/evansrobbymacharia/" target ='_blank'  rel="noreferrer"  className='flex items-center justify-between w-full text-base'><FaLinkedin size={30}/>LinkedIn 
                 </a>
             </li>
             <li className='w-[114px] m-auto h-[20px] flex items-center  mr-[-82px] md:mr-[-54px] hover:text-accent md:hover:mr-[10px] duration-300 ease-in'>
-                <a href="/"  className='flex items-center justify-between w-full text-base '><FaGithub size={30}/> GitHub
+                <a href="https://github.com/EvansRobbie" target ='_blank'  rel="noreferrer"   className='flex items-center justify-between w-full text-base '><FaGithub size={30}/> GitHub
                 </a>
             </li>
             <li className='w-[150px] mx-auto h-[20px] flex items-center justify-between hover:text-accent mr-[-120px] md:mr-[-90px]  md:hover:mr-[10px] duration-300 ease-in'>
-                <a href="/"  className='flex items-center justify-between w-full text-base '><FaInstagram size={30}/>Instagram 
+                <a href="https://www.instagram.com/evam_marketing_solutions/" target ='_blank'  rel="noreferrer"   className='flex items-center justify-between w-full text-base '><FaInstagram size={30}/>Instagram 
                 </a>
             </li>
             <li className='w-[110px] mx-auto h-[20px] flex items-center justify-between hover:text-accent mr-[-75px] md:mr-[-55px] md:hover:mr-[10px] duration-300 ease-in'>
-                <a href="/"  className='flex items-center justify-between w-full text-base '><FaTwitter size={30}/>Twitter 
+                <a href="https://twitter.com/e_robbievans" target ='_blank'  rel="noreferrer"   className='flex items-center justify-between w-full text-base '><FaTwitter size={30}/>Twitter 
                 </a>
             </li>
            </ul>
